@@ -108,11 +108,11 @@ $(function() {
         let firstFeed;
         beforeEach(function(done) {
             loadFeed(0);
-            firstFeed = $('.feed').html();
+            firstFeed = $('.feed').text();
             loadFeed(1, done);
         });
         it('feed updates', function(){
-            expect($('.feed').html()).not.toBe(firstFeed);
+            expect($('.feed').text()).not.toBe(firstFeed);
         });
 
     });
